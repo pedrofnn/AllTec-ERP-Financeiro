@@ -1,0 +1,47 @@
+:root{
+    --primary: #E74B32;
+    --secondary: #9F9F9F;
+    --corpo: #EFEFEF;
+    --menu: #585958;
+    --primary-hover: #E74B32
+}
+header{
+    background-color: var(--menu);
+    color: var(--corpo);
+    width: 100%;
+}
+header p{
+    font-size: 1.4rem;
+}
+header .logo{
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}
+.texto-laranja{
+    color: var(--primary)
+}
+body{
+    background-color: var(--corpo);
+    height:100vh ;
+}
+footer{
+    background-color: var(--menu);
+    color: var(--corpo);
+    width: 100%;
+}
+.menu-navbar{
+    background-color: var(--menu);
+    width: 4.5rem;
+}
+.active{
+    background-color: var(--primary) !important;
+    
+}
+.nav-item img{
+    width: 24px;
+    height: 24px;
+}
+
+
+
