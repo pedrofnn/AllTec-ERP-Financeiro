@@ -1,5 +1,3 @@
-import ApexCharts from 'apexcharts'
-
 /*======== CARD AREA CHART 01 ========*/
 var cardArea1 = document.querySelector("#card-area-1");
 if (cardArea1 !== null) {

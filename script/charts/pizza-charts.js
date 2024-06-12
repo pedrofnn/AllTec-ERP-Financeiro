@@ -1,5 +1,3 @@
-import ApexCharts from '../apexcharts'
-
 /*======== PIZZA CHART ========*/
 var pizzaChart = document.getElementById("pizzachart");
 if (pizzaChart !== null) {

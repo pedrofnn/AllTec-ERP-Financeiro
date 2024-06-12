@@ -18,6 +18,9 @@
   <link rel="stylesheet" href="./style/despesas-tabela.css">
   <link rel="stylesheet" href="./style/index.css">
   <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  <script type="module" src="script/charts/spline-chart.js"></script>
+  <script type="module" src="script/charts/mixed-charts.js"></script>
+  <script type="module" src="./script/charts/pizza-charts.js"></script>
   <title>AllTec - HOME</title>
 </head>
 
@@ -34,27 +37,29 @@
     </a>
   </header>
   <main class="d-flex flex-grow-1">
-    <div class="d-flex flex-column flex-shrink-0 menu-navbar justify-content-center"  >
-      <ul class="nav nav-pills nav-flush flex-column text-center my-auto position-fixed top-50 align-items-center">
-        <li class="nav-item">
-          <a href="./index.html" class="nav-link py-3 rounded-0 active" aria-current="page" title="Home"
-            data-bs-toggle="tooltip" data-bs-placement="right">
-            <img src="./icons/house-door-fill.svg" alt="Ícone Home" width="24" height="24">
-          </a>
-        </li>
-        <li>
-          <a href="./despesas-tabela.html" class="nav-link py-3 rounded-0 icon" title="Despesas e Receitas"
-            data-bs-toggle="tooltip" data-bs-placement="right">
-            <img src="./icons/search.svg" alt="Ícone Search" width="24" height="24">
-          </a>
-        </li>
-        <li>
-          <a href="#" class="nav-link py-3 rounded-0" title="Registrar nova despesa" data-bs-toggle="tooltip"
-            data-bs-placement="right">
-            <img src="./icons/pen-fill.svg" alt="Ícone Registrar" width="24" height="24">
-          </a>
-        </li>
-      </ul>
+    <div class="menu-navbar flex-shrink-0">
+      <div class="d-flex flex-column menu-navbar position-fixed justify-content-center z-3 menu-lateral">
+        <ul class="nav nav-pills nav-flush flex-column text-center">
+          <li class="nav-item">
+            <a href="./index.html" class="nav-link py-3 rounded-0 active" aria-current="page" title="Home"
+              data-bs-toggle="tooltip" data-bs-placement="right">
+              <img src="./icons/house-door-fill.svg" alt="Ícone Home" width="24" height="24">
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="./despesas-tabela.html" class="nav-link py-3 rounded-0 icon" title="Despesas e Receitas"
+              data-bs-toggle="tooltip" data-bs-placement="right">
+              <img src="./icons/search.svg" alt="Ícone Search" width="24" height="24">
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link py-3 rounded-0" title="Registrar nova despesa" data-bs-toggle="tooltip"
+              data-bs-placement="right">
+              <img src="./icons/pen-fill.svg" alt="Ícone Registrar" width="24" height="24">
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
     <!--Aqui vai o counteúdo principal-->
     <div class="container container-fluid mt-4 content-wrapper ">
@@ -418,403 +423,6 @@
   <footer class="p-2 my-0 fixed-bottom">
     <p class="text-center my-auto">&copy; AllTec 2024</p>
   </footer>
-
-  <script>
-
-    /*======== CARD AREA CHART 01 ========*/
-    var cardArea1 = document.querySelector("#card-area-1");
-    if (cardArea1 !== null) {
-      var splinaAreaOptions1 = {
-        chart: {
-          id: "card-area-1",
-          group: "social",
-          height: 135,
-          width: "100%",
-          background: "#e74a33",
-          type: "area",
-          sparkline: {
-            enabled: true,
-          },
-        },
-        yaxis: {
-          labels: {
-            minWidth: 40,
-          },
-        },
-        stroke: {
-          width: 2,
-        },
-        colors: ["rgba(255, 255, 255, .6)"],
-        fill: {
-          type: "gradient",
-          gradient: {
-            shade: "light",
-            shadeIntensity: 1,
-            opacityFrom: 0.3,
-            opacityTo: 0.3,
-            stops: [0, 50, 100],
-          },
-        },
-
-        tooltip: {
-          theme: "dark",
-          marker: {
-            show: false,
-          },
-          x: {
-            show: false,
-          },
-          y: {
-            title: {
-              formatter: function () {
-                return "";
-              },
-            },
-          },
-        },
-
-        series: [
-          {
-            data: [0, 15, 18, 20, 16, 17, 23, 17, 25],
-          },
-        ],
-      };
-      var randerSplinaArea1 = new ApexCharts(cardArea1, splinaAreaOptions1);
-      randerSplinaArea1.render();
-    }
-
-    //   /*======== CARD AREA CHART 02 ========*/
-    var cardArea2 = document.querySelector("#card-area-2");
-    if (cardArea2 !== null) {
-      var splinaAreaOptions2 = {
-        chart: {
-          id: "card-area-1",
-          group: "social",
-          height: 135,
-          width: "100%",
-          background: "#46c79e",
-          type: "area",
-          sparkline: {
-            enabled: true,
-          },
-        },
-        yaxis: {
-          labels: {
-            minWidth: 40,
-          },
-        },
-        stroke: {
-          width: 2,
-        },
-        colors: ["#ffffff"],
-        fill: {
-          type: "gradient",
-          gradient: {
-            shadeIntensity: 1,
-            opacityFrom: 0.7,
-            opacityTo: 0.3,
-            stops: [0, 90, 100],
-          },
-        },
-        tooltip: {
-          followCursor: false,
-          theme: "dark",
-          x: {
-            show: false,
-          },
-          marker: {
-            show: false,
-          },
-          y: {
-            title: {
-              formatter: function () {
-                return "";
-              },
-            },
-          },
-        },
-
-        series: [
-          {
-            data: [0, 4, 6, 14, 8, 10, 17, 20, 16],
-          },
-        ],
-      };
-      var randerSplinaArea2 = new ApexCharts(cardArea2, splinaAreaOptions2);
-      randerSplinaArea2.render();
-    }
-
-    //   /*======== CARD AREA CHART 03 ========*/
-    var cardArea3 = document.querySelector("#card-area-3");
-    if (cardArea3 !== null) {
-      var splinaAreaOptions3 = {
-        chart: {
-          id: "card-area-3",
-          group: "social",
-          height: 135,
-          width: "100%",
-          background: "#9e6de0",
-          type: "area",
-          sparkline: {
-            enabled: true,
-          },
-        },
-        yaxis: {
-          labels: {
-            minWidth: 40,
-          },
-        },
-        stroke: {
-          width: 2,
-        },
-        colors: ["#ffffff"],
-        fill: {
-          type: "gradient",
-          gradient: {
-            shadeIntensity: 1,
-            opacityFrom: 0.7,
-            opacityTo: 0.3,
-            stops: [0, 90, 100],
-          },
-        },
-        tooltip: {
-          followCursor: false,
-          theme: "dark",
-          x: {
-            show: false,
-          },
-          marker: {
-            show: false,
-          },
-          y: {
-            title: {
-              formatter: function () {
-                return "";
-              },
-            },
-          },
-        },
-
-        series: [
-          {
-            data: [0, 8, 20, 14, 17, 12, 14, 8, 5],
-          },
-        ],
-      };
-      var randerSplinaArea3 = new ApexCharts(cardArea3, splinaAreaOptions3);
-      randerSplinaArea3.render();
-    }
-
-    // /*======== CARD AREA CHART 04 ========*/
-    var cardArea4 = document.querySelector("#card-area-4");
-    if (cardArea4 !== null) {
-      var splinaAreaOptions4 = {
-        chart: {
-          id: "card-area-3",
-          group: "social",
-          height: 135,
-          width: "100%",
-          background: "#6696fe",
-          type: "area",
-          sparkline: {
-            enabled: true,
-          },
-        },
-        yaxis: {
-          labels: {
-            minWidth: 40,
-          },
-        },
-        stroke: {
-          width: 2,
-        },
-        colors: ["#ffffff"],
-        fill: {
-          type: "gradient",
-          gradient: {
-            shadeIntensity: 1,
-            opacityFrom: 0.7,
-            opacityTo: 0.3,
-            stops: [0, 90, 100],
-          },
-        },
-        tooltip: {
-          followCursor: false,
-          theme: "dark",
-          x: {
-            show: false,
-          },
-          marker: {
-            show: false,
-          },
-          y: {
-            title: {
-              formatter: function () {
-                return "";
-              },
-            },
-          },
-        },
-
-        series: [
-          {
-            data: [0, 3, 8, 15, 20, 10, 12, 10, 5],
-          },
-        ],
-      };
-      var randerSplinaArea4 = new ApexCharts(cardArea4, splinaAreaOptions4);
-      randerSplinaArea4.render();
-    }
-
-    //   /*======== MIXED CHART 01 ========*/
-    var mixedChart1 = document.querySelector("#mixed-chart-1");
-    if (mixedChart1 !== null) {
-      var mixedOptions1 = {
-        chart: {
-          height: 370,
-          type: "bar",
-          toolbar: {
-            show: false,
-          },
-        },
-        colors: ["#33A895", "#E74A33", "#f2e052"],
-        legend: {
-          show: true,
-          position: "top",
-          horizontalAlign: "right",
-          markers: {
-            width: 20,
-            height: 5,
-            radius: 0,
-          },
-        },
-        plotOptions: {
-          bar: {
-            horizontal: false,
-            columnWidth: "50%",
-            barHeight: "10%",
-            distributed: false,
-          },
-        },
-        dataLabels: {
-          enabled: false,
-        },
-
-        stroke: {
-          show: true,
-          width: 2,
-          curve: "smooth",
-        },
-
-        series: [
-          {
-            name: "Despesas",
-            type: "column",
-            data: [44, 55, 57, 56, 61, 58, 63, 60, 66, 55, 47, 67],
-          },
-          {
-            name: "Receitas",
-            type: "column",
-            data: [76, 85, 101, 98, 87, 100, 91, 40, 94, 50, 47, 55],
-          },
-          {
-            name: "Lucros",
-            data: [50, 40, 64, 87, -15, 104, 63, 42, 32, 60, 78, 25],
-            type: "line",
-          },
-        ],
-
-        xaxis: {
-          categories: [
-            "Jan",
-            "Fev",
-            "Mar",
-            "Abr",
-            "Mai",
-            "Jun",
-            "Jul",
-            "Ago",
-            "Set",
-            "Out",
-            "Nov",
-            "Dez",
-          ],
-
-          axisBorder: {
-            show: false,
-          },
-          axisTicks: {
-            show: false,
-          },
-          crosshairs: {
-            width: 40,
-          },
-        },
-
-        fill: {
-          opacity: 1,
-        },
-
-        tooltip: {
-          shared: true,
-          intersect: false,
-          followCursor: true,
-          fixed: {
-            enabled: false,
-          },
-          x: {
-            show: false,
-          },
-          y: {
-            title: {
-              formatter: function (seriesName) {
-                return seriesName;
-              },
-            },
-          },
-        },
-      };
-
-      var randerMixedChart1 = new ApexCharts(mixedChart1, mixedOptions1);
-      randerMixedChart1.render();
-    }
-
-
-    /*======== PIZZA CHART ========*/
-    var pizzaChart = document.querySelector("#pizzachart");
-    if (pizzaChart !== null) {
-      var pizzaChartOptions = {
-        chart: {
-          width: 470,
-          type: "pie",
-        },
-        colors: ["#E84B33", "#33D6E8", "#fd5190", "#33A895"],
-        labels: ["Eletricidade", "Internet", "Celular", "Água"],
-        legend: {
-          position: "top",
-          horizontalAlign: "left",
-          markers: {
-            radius: 0,
-          },
-        },
-        series: [65, 25, 10, 55],
-      };
-
-      var pizzaChartRander = new ApexCharts(
-        pizzaChart,
-        pizzaChartOptions
-      );
-
-      pizzaChartRander.render();
-    }
-
-
-
-  </script>
-
-  <!-- <script type="module" src="script/charts/spline-chart.js"></script> -->
-  <!-- <script type="module" src="script/charts/mixed-charts.js"></script> -->
-  <!-- <script type="module" src="script/charts/pizza-charts.js"></script> -->
 </body>
 
 </html>

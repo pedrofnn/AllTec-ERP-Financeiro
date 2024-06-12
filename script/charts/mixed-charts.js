@@ -1,5 +1,3 @@
-import ApexCharts from 'apexcharts'
-
 /*======== MIXED CHART 01 ========*/
 var mixedChart1 = document.querySelector("#mixed-chart-1");
 if (mixedChart1 !== null) {
