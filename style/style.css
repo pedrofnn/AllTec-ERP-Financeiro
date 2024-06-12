@@ -1,9 +1,9 @@
 :root{
-    --primary: #E74B32;
+    --primary: #E74A33;
     --secondary: #9F9F9F;
-    --corpo: #EFEFEF;
-    --menu: #585958;
-    --primary-hover: #E74B32
+    --corpo: #F0F0F1;
+    --menu: #595959;
+    --primary-hover: #D63624;
 }
 header{
     background-color: var(--menu);
