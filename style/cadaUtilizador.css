@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+body {
+  background-color: #f0f0f1;
+}
+
+.alinhador {
+  margin: 2% 5%;
+  height: 90vh;
+  border-radius: 1%;
+  background-color: #595959;
+}
+.alinhador a img {
+  width: 30%;
+  margin: 30px;
+}
+
+.contPrincipal {
+  height: 70%;
+  display: flex;
+}
+.formulario {
+  width: 60%;
+  margin: 20px;
+}
+.formulario label {
+  font-family: "Nunito", sans-serif;
+  color: #f0f0f1;
+}
+.formulario .forms {
+  font-family: "Nunito", sans-serif;
+  background-color: #e74b32;
+  width: 100%;
+}
+.formulario h2 {
+  font-family: "Nunito", sans-serif;
+  font-size: 2em;
+  font-weight: 700;
+  color: #e74b32;
+  padding-left: 50px;
+  margin-bottom: 20px;
+}
+.img {
+  background-image: url(../imgs/foto-demulher-americana-sobre-a-parede-laranja_.jpg);
+  background-image: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  clip-path: polygon(0 0, 81% 1%, 100% 71%, 20% 100%);
+  width: 35%;
+  height: 100%;
+}
+
+.btn {
+  font-family: "Nunito", sans-serif;
+  font-size: 17px;
+  font-weight: 500;
+  color: #f0f0f1;
+  background-color: #e74b32;
+  box-shadow: 1px 2px #3a3a3a;
+  min-width: 20%;
+  height: 40px;
+  margin-left: 1%;
+}
+.btn:hover {
+  font-size: 17px;
+  color: #f0f0f1;
+  border: 2px solid #e74b32;
+  background-color: #f35c45;
+}
+input {
+  height: 40px;
+}
+input:focus {
+    background-color: #e74b32;
+}
+
