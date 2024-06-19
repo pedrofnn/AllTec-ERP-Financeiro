@@ -1,0 +1,6 @@
+.formulario-registro{
+    max-width:900px ;
+}
+.formulario-registro textarea{
+    resize: none;
+}
