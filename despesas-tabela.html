@@ -24,6 +24,7 @@
     </a>
   </header>
   <main class="d-flex flex-grow-1">
+    <!--Menu Lateral-->
     <div class="menu-navbar flex-shrink-0">
       <div class="d-flex flex-column menu-navbar position-fixed justify-content-center z-3 menu-lateral">
         <ul class="nav nav-pills nav-flush flex-column text-center">
@@ -48,13 +49,15 @@
         </ul>
       </div>
     </div>
+    <!--Card Principal-->
     <div class="container-fluid card card-principal">
       <div class="row card-header">
         <h1 class="fw-bold">Despesas e Receitas</h1>
       </div>
       <div class="d-flex justify-content-between my-4">
+        <!--Barra de Pesquisa-->
         <div>
-          <form role="search" id="search-form">
+          <form role="search" id="searchForm">
             <div class="input-group">
               <input class="form-control" type="search" placeholder="Search" aria-label="Search">
               <button class="btn btn-secondary" type="submit">
@@ -63,6 +66,7 @@
             </div>
           </form>
         </div>
+        <!--Dropdown Filtro-->
         <div class="dropdown">
           <button type="button" class="btn btn-primario dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
             <span><img src="./icons/filter-left.svg" alt="Ícone de filtro"></span>
@@ -117,12 +121,13 @@
               </div>
               </fieldset>
               <div class="d-flex justify-content-between">
-                <input type="reset" class="btn btn-secondary col-4" id="reset-button" value="Cancelar">
+                <input type="reset" class="btn btn-secondary col-4" id="resetButton" value="Cancelar">
                 <button type="submit" class="btn btn-primario col-4">Aplicar</button>
               </div>
           </form>
         </div>
       </div>
+      <!--Tabela-->
       <div class="container-fluid table-responsive table-div mb-3">
         <table class="table align-middle">
           <thead class="table-secondary">
@@ -151,13 +156,13 @@
                     </button>
                     <ul class="dropdown-menu" data-bs-theme="dark">
                       <li>
-                        <a href="" class="dropdown-item"><span class=" option-icons"><img src="./icons/eye-fill.svg" alt="Ícone de visualização"></span>Visualizar</a>
+                        <button class="dropdown-item viewButton" data-bs-toggle="modal" data-bs-target="#modalDetails"><span class=" option-icons"><img src="./icons/eye-fill.svg" alt="Ícone de visualização"></span>Visualizar</button>
                       </li>
                       <li>
-                        <a href="" class="dropdown-item"><span class="option-icons"><img src="./icons/pencil-fill.svg" alt="Ícone de edição"></span>Editar</a>
+                        <button class="dropdown-item editButton" data-bs-toggle="modal" data-bs-target="#modalDetails"><span class="option-icons" ><img src="./icons/pencil-fill.svg" alt="Ícone de edição"></span>Editar</button>
                       </li>
                       <li>
-                        <a href="" class="dropdown-item"><span class="option-icons"><img src="./icons/trash-fill.svg" alt="Icone de exclusão"></span>Excluir</a>
+                        <button class="dropdown-item excluirButton"><span class="option-icons"><img src="./icons/trash-fill.svg" alt="Icone de exclusão"></span>Excluir</button>
                       </li>
                     </ul>
                   </div>
@@ -177,13 +182,13 @@
                     </button>
                     <ul class="dropdown-menu" data-bs-theme="dark">
                       <li>
-                        <a href="" class="dropdown-item"><span class=" option-icons"><img src="./icons/eye-fill.svg" alt="Ícone de visualização"></span>Visualizar</a>
+                        <button class="dropdown-item viewButton" data-bs-toggle="modal" data-bs-target="#modalDetails"><span class=" option-icons"><img src="./icons/eye-fill.svg" alt="Ícone de visualização"></span>Visualizar</button>
                       </li>
                       <li>
-                        <a href="" class="dropdown-item"><span class="option-icons"><img src="./icons/pencil-fill.svg" alt="Ícone de edição"></span>Editar</a>
+                        <button class="dropdown-item editButton" data-bs-toggle="modal" data-bs-target="#modalDetails"><span class="option-icons" ><img src="./icons/pencil-fill.svg" alt="Ícone de edição"></span>Editar</button>
                       </li>
                       <li>
-                        <a href="" class="dropdown-item"><span class="option-icons"><img src="./icons/trash-fill.svg" alt="Icone de exclusão"></span>Excluir</a>
+                        <button class="dropdown-item excluirButton"><span class="option-icons"><img src="./icons/trash-fill.svg" alt="Icone de exclusão"></span>Excluir</button>
                       </li>
                     </ul>
                   </div>
@@ -203,13 +208,13 @@
                     </button>
                     <ul class="dropdown-menu" data-bs-theme="dark">
                       <li>
-                        <a href="" class="dropdown-item"><span class=" option-icons"><img src="./icons/eye-fill.svg" alt="Ícone de visualização"></span>Visualizar</a>
+                        <button class="dropdown-item viewButton" data-bs-toggle="modal" data-bs-target="#modalDetails"><span class=" option-icons"><img src="./icons/eye-fill.svg" alt="Ícone de visualização"></span>Visualizar</button>
                       </li>
                       <li>
-                        <a href="" class="dropdown-item"><span class="option-icons"><img src="./icons/pencil-fill.svg" alt="Ícone de edição"></span>Editar</a>
+                        <button class="dropdown-item editButton" data-bs-toggle="modal" data-bs-target="#modalDetails"><span class="option-icons" ><img src="./icons/pencil-fill.svg" alt="Ícone de edição"></span>Editar</button>
                       </li>
                       <li>
-                        <a href="" class="dropdown-item"><span class="option-icons"><img src="./icons/trash-fill.svg" alt="Icone de exclusão"></span>Excluir</a>
+                        <button class="dropdown-item excluirButton"><span class="option-icons"><img src="./icons/trash-fill.svg" alt="Icone de exclusão"></span>Excluir</button>
                       </li>
                     </ul>
                   </div>
@@ -229,13 +234,13 @@
                     </button>
                     <ul class="dropdown-menu" data-bs-theme="dark">
                       <li>
-                        <a href="" class="dropdown-item"><span class=" option-icons"><img src="./icons/eye-fill.svg" alt="Ícone de visualização"></span>Visualizar</a>
+                        <button class="dropdown-item viewButton" data-bs-toggle="modal" data-bs-target="#modalDetails"><span class=" option-icons"><img src="./icons/eye-fill.svg" alt="Ícone de visualização"></span>Visualizar</button>
                       </li>
                       <li>
-                        <a href="" class="dropdown-item"><span class="option-icons"><img src="./icons/pencil-fill.svg" alt="Ícone de edição"></span>Editar</a>
+                        <button class="dropdown-item editButton" data-bs-toggle="modal" data-bs-target="#modalDetails"><span class="option-icons" ><img src="./icons/pencil-fill.svg" alt="Ícone de edição"></span>Editar</button>
                       </li>
                       <li>
-                        <a href="" class="dropdown-item"><span class="option-icons"><img src="./icons/trash-fill.svg" alt="Icone de exclusão"></span>Excluir</a>
+                        <button class="dropdown-item excluirButton"><span class="option-icons"><img src="./icons/trash-fill.svg" alt="Icone de exclusão"></span>Excluir</button>
                       </li>
                     </ul>
                   </div>
@@ -245,9 +250,95 @@
         </table>
       </div>
     </div>
+    <!--Modal de Visualização-->
+    <div class="modal fade" id="modalDetails" tabindex="-1" aria-labelledby="modalDetailsLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content" id="modalBody">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="modalDetailsLabel">Visualização</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form class="mx-auto formulario-modal" id="modalForm">
+            <div class="row mt-1">
+              <div class="col-12">
+                <label for="inputNome" class="form-label">Nome</label>
+                <input type="text" id="inputNome" name="inputNome" class="form-control" required maxlength="50" minlength="3" disabled>
+              </div>
+            </div>
+            <div class="row mt-1">
+              <div class="col-6">
+                <label for="inputTipo" class="form-label">Tipo</label>
+                <select name="inputTipo" id="inputTipo" class="form-select" required disabled>
+                  <option disabled selected value="">Selecione o tipo</option>
+                  <option value="despesa">Despesa</option>
+                  <option value="receita">Receita</option>
+                </select>
+              </div>
+              <div class="col-6">
+                <label for="inputValor" class="form-label">Valor</label>
+                <div class="input-group">
+                  <div class="input-group-text">R$</div>
+                  <input type="text" name="inputValor" id="inputValor" class="form-control" required minlength="3" disabled>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-1">
+              <div class="col">
+                <label for="inputData" class="form-label">Data</label>
+                <input type="date" name="inputData" id="inputData" class="form-control" required disabled>
+              </div>
+              <div class="col">
+                <label for="inputCategoria" class="form-label">Categoria</label>
+                 <select name="inputCategoria" id="inputCategoria" class="form-select" disabled>
+                   <option disabled selected value="">Selecione uma categoria</option>
+                   <option value="agua">Água</option>
+                   <option value="aluguel">Aluguel</option>
+                   <option value="celular">Celular</option>
+                   <option value="eletricidade">Eletricidade</option>
+                   <option value="internet">Internet</option>
+                   <option value="salario">Salário</option>
+                 </select>
+               </div>
+            </div>
+             <div class="row mt-1">
+               <div class="col-12">
+                  <label for="inputCPF" class="form-label">CPF ou CNPJ</label>
+                  <input type="text" name="inputCPF" id="inputCPF" class="form-control" required minlength="10" maxlength="20" disabled>
+                </div>
+             </div>
+             <div class="row mt-1">
+              <div class="col-6">
+                <label for="inputStatus" class="form-label">Status</label>
+                <select name="inputStatus" id="inputStatus" class="form-select" disabled>
+                  <option value="completo" class="btn-success">Completo</option>
+                  <option value="pendente">Pendente</option>
+                  <option value="vencido">Vencido</option>
+                </select>
+              </div>
+             </div>
+            <div class="row mt-1">
+              <div class="col-12">
+                <label for="textoDescricao" class="form-label">Descrição</label>
+                <textarea name="textoDescricao" id="textoDescricao" class="form-control" placeholder="Escreva uma pequena descrição" maxlength="200" disabled></textarea>
+              </div>
+            </div>
+            <button type="submit" class="d-none"></button>
+            </form>
+        </div>
+        <div class="modal-footer justify-content-between">
+          <button type="button" class="btn btn-secondary px-3" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primario px-3" id="modalSubmit">Editar</button>
+        </div>
+      </div>
+    </div>
+  </div>
   </main>
   <footer class="p-2 my-0 fixed-bottom">
     <p class="text-center my-auto">&copy; AllTec 2024</p>
   </footer>
+  <script>
+
+  </script>
 </body>
 </html>

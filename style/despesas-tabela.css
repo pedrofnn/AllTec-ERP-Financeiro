@@ -64,15 +64,18 @@ td.item-menu {
     width: 20px;
     height: 20px;
 }
-a .option-icons{
+li .option-icons{
     margin-bottom: 1px;
     margin-right: 15px 
 }
 .dropend .dropdown-menu{
     transform: translate(-40px, -33%) !important;
   }
-.dropend .dropdown-menu a:hover{
+.dropend .dropdown-menu li:hover{
     text-decoration: underline;
+}
+.formulario-modal textarea{
+    resize: none;
 }
 
 @supports selector(::-webkit-scrollbar) {
